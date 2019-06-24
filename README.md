@@ -1,6 +1,8 @@
 # tii
 **a command line tool like *tee* but also saving to the Internet (PasteBin)**
 
+[![asciicast](https://asciinema.org/a/253356.svg)](https://asciinema.org/a/253356)
+
 ### PasteBin.com API key
 
 To use this script you'll need an API key from [PasteBin.com](https://pastebin.com/), the amazing online service behind this script.
