@@ -15,7 +15,9 @@ You can save your API key in `~/.pastebin` to avoid supplying it to the script. 
 cat  your-files | tii [filename]
 ```
 
-The proram will print at the end the URL of your new pastebin. Note: to work as expected (like _tee_) the URL will be printed in the STDERR strem, unless you specify `--silent`.
+The program will print at the end the URL of your new pastebin. 
+
+**Note**: to work as expected (like _tee_) the URL will be printed in the STDERR strem, unless you specify `--silent`. An optional filename can be specified, as in the original _tee_, in that case the stream will be _also_ saved in the file.
 
 ### Program options
 
@@ -49,4 +51,3 @@ The proram will print at the end the URL of your new pastebin. Note: to work as 
 ### Dependencies
 This is a perl script that uses a local copy of [WWW::Pastebin::PastebinCom::API](https://metacpan.org/pod/WWW::Pastebin::PastebinCom::API).
 A CPAN version with dependency management is under development.
-
