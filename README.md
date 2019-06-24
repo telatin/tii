@@ -1,8 +1,6 @@
 # tii
 **a command line tool like *tee* but also saving to the Internet (PasteBin)**
 
-[![asciicast](https://asciinema.org/a/253356.svg)](https://asciinema.org/a/253356)
-
 ### PasteBin.com API key
 
 To use this script you'll need an API key from [PasteBin.com](https://pastebin.com/), the amazing online service behind this script.
@@ -53,3 +51,7 @@ The program will print at the end the URL of your new pastebin.
 ### Dependencies
 This is a perl script that uses a local copy of [WWW::Pastebin::PastebinCom::API](https://metacpan.org/pod/WWW::Pastebin::PastebinCom::API).
 A CPAN version with dependency management is under development.
+
+### Demo
+
+[![asciicast](https://asciinema.org/a/253356.svg)](https://asciinema.org/a/253356)
