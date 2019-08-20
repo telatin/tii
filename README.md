@@ -1,6 +1,9 @@
 # tii
 **a command line tool like *tee* but also saving to the Internet (PasteBin)**
 
+[![Build Status](https://travis-ci.org/telatin/tii.svg?branch=master)](https://travis-ci.org/telatin/tii)
+
+
 ### PasteBin.com API key
 
 To use this script you'll need an API key from [PasteBin.com](https://pastebin.com/), the amazing online service behind this script.
@@ -55,3 +58,8 @@ A CPAN version with dependency management is under development.
 ### Demo
 
 [![asciicast](https://asciinema.org/a/253356.svg)](https://asciinema.org/a/253356)
+
+### Links
+
+ - [Change log](CHANGES.md)
+ - [License](LICENSE)
