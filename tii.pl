@@ -18,9 +18,10 @@ my $opt_append;
 my $opt_listed;
 my $opt_private;
 my $opt_verbose;
+my $opt_test;
 # Gently stop reading STDIN if Ctrl+C is pressed
 $SIG{INT} = sub { 
-	print "Received Ctrl+C; will finish reading STDIN and create the paste. Press again to quit immediately.\n"; 
+	print STDERR "Received Ctrl+C; will finish reading STDIN and create the paste. Press again to quit immediately.\n"; 
 	$program_break++; 
 	exit if ($program_break > 1);
 };
@@ -37,6 +38,7 @@ my $_opt = GetOptions(
   'p|private'  => \$opt_private,
   'h|help'     => \$opt_help,
   'v|verbose'  => \$opt_verbose,
+  'test'       => \$opt_test,
   
 );
 
@@ -44,8 +46,12 @@ my $unlisted = 1;
 $unlisted = 0 if ($opt_listed or $opt_private);
 
 
-unless ($api_key) {
-	die "Pastebin.com api key not found in ~/.pastebin neither supplied via -a\n";
+if ($opt_test) {
+	say STDERR "Exiting test...";
+	exit;
+}
+unless ($api_key) { 
+	die "Pastebin.com api key not found in ~/.pastebin neither supplied via -k (--apikey)\n";
 }
 
 usage() if ($opt_help);
