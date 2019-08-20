@@ -6,7 +6,7 @@ use lib "$Bin/lib/";
 use WWW::Pastebin::PastebinCom::API;
 use File::Spec::Functions;
 use Getopt::Long;
-
+our $VERSION = '1.0';
 my $api_key = get_api_key();
 my $opt_title   = 'tii paste';
 my $opt_format;
@@ -140,24 +140,6 @@ sub usage {
 END
  exit;
 }
+
+
 __END__
-##### Private paste with all optional args set
- 
-$bin = WWW::Pastebin::PastebinCom::API->new(
-    api_key => 'a3767061e0e64fef6c266126f7e588f4',
-);
- 
- 
-$bin->paste(
-    'Stuff to paste',
- 
-    title => 'Title for your paste',
-    private => 1,       # set paste as a private paste
-    format => 'perl',   # Perl syntax highlighting
-    expiry => 'awhile', # expire the paste after 1 week
-) or die "$bin";
- 
-print "$bin\n";
-
-
-
